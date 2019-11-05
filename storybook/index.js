@@ -10,12 +10,30 @@ configure(() => {
 Colors.loadColors({
   white: 'rgb(255, 255, 255)',
   blue: 'rgb(32, 48, 60)',
+  orange: 'rgb(235, 87, 79)',
 });
 
 Typography.loadTypographies({
+  hNumber: {
+    fontSize: 220,
+    fontWeight: '400',
+    fontFamily: 'Helvetica',
+  },
   h1: {
     fontSize: 100,
     fontWeight: '400',
+    lineHeight: 100,
+    fontFamily: 'Helvetica',
+  },
+  h1B: {
+    fontSize: 100,
+    fontWeight: '600',
+    lineHeight: 100,
+    fontFamily: 'Helvetica',
+  },
+  h1L: {
+    fontSize: 100,
+    fontWeight: '200',
     lineHeight: 100,
     fontFamily: 'Helvetica',
   },
