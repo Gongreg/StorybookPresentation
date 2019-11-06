@@ -60,15 +60,55 @@ export const SidebarImage = () => (
 export const ThankYouImage = () => (
   <Image
     source={require('./images/thankyou.png')}
-    style={{resizeMode: 'contain', height: 940, transform: [{ rotate: '20deg' }]}}
+    style={{resizeMode: 'contain', height: 940, transform: [{rotate: '20deg'}]}}
   />
 );
 
 export const VSCode = () => (
+  <Image source={require('./images/vscode-addon.gif')} />
+);
+
+export const PresentationalComponents = () => (
   <Image
-    source={require('./images/vscode-addon.gif')}
+    source={require('./images/presentational-components.png')}
+    style={{resizeMode: 'contain', height: '50%'}}
   />
 );
+
+export const AsyncStorage = () => (
+  <Image
+    source={require('./images/async-storage.gif')}
+    style={{resizeMode: 'contain', height: '60%'}}
+  />
+);
+
+export const Applitools = () => (
+  <Image
+    source={require('./images/applitools.gif')}
+    style={{resizeMode: 'contain', height: '60%'}}
+  />
+);
+
+export const WebView = () => (
+  <Image
+    source={require('./images/web-view.png')}
+    style={{resizeMode: 'contain', height: '60%'}}
+  />
+);
+
+export const OldUI = () => (
+  <Image
+    source={require('./images/old-ui.gif')}
+  />
+);
+
+export const Community = () => (
+  <Image
+    source={require('./images/community.jpg')}
+    style={{resizeMode: 'contain', height: '60%'}}
+  />
+);
+
 
 export const images = {
   sidebar: SidebarImage,
@@ -80,5 +120,11 @@ export const images = {
   storybook: StorybookImage,
   wix: WixImage,
   thankyou: ThankYouImage,
-  vscode: VSCode
+  vscode: VSCode,
+  presentationalComponents: PresentationalComponents,
+  asyncStorage: AsyncStorage,
+  applitools: Applitools,
+  webView: WebView,
+  oldUI: OldUI,
+  community: Community
 };

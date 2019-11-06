@@ -43,6 +43,12 @@ Typography.loadTypographies({
     lineHeight: 64,
     fontFamily: 'Helvetica',
   },
+  h3: {
+    fontSize: 24,
+    fontWeight: '400',
+    lineHeight: 64,
+    fontFamily: 'Helvetica',
+  },
 });
 
 const lightTheme = {
