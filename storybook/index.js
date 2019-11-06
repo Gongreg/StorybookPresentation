@@ -64,15 +64,15 @@ const lightTheme = {
 const darkTheme = {
   backgroundColor: Colors.blue,
   headerTextColor: Colors.white,
-  labelColor: Colors.blue,
-  borderColor: 'rgb(32, 48, 60)',
+  labelColor: Colors.white,
+  borderColor: Colors.white,
   previewBorderColor: 'gray',
   buttonTextColor: Colors.white,
   buttonActiveTextColor: Colors.white,
 };
 
 //const StorybookUIRoot = getStorybookUI({theme: lightTheme, isUIHidden: true});
-const StorybookUIRoot = getStorybookUI({theme: darkTheme, isUIHidden: false});
+const StorybookUIRoot = getStorybookUI({theme: darkTheme, isUIHidden: true});
 
 //const StorybookUIRoot = getStorybookUI();
 export default () => (
