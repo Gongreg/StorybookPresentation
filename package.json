@@ -21,7 +21,7 @@
     "@storybook/addon-options": "5.3.0-alpha.38",
     "@storybook/addons": "5.3.0-alpha.38",
     "@storybook/react-native": "5.3.0-alpha.38",
-    "@storybook/react-native-server": "^5.3.0-alpha.38",
+    "@storybook/react-native-server": "5.3.0-alpha.38",
     "babel-plugin-react-docgen": "^3.2.0",
     "react": "16.9.0",
     "react-native": "0.61.3",
