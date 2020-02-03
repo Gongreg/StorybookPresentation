@@ -34,7 +34,7 @@ Typography.loadTypographies({
   h1L: {
     fontSize: 100,
     fontWeight: '200',
-    lineHeight: 100,
+    lineHeight: 120,
     fontFamily: 'Helvetica',
   },
   h2: {

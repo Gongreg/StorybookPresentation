@@ -109,6 +109,40 @@ export const Community = () => (
   />
 );
 
+export const QR = () => (
+  <Image
+    source={require('./images/qr.png')}
+    style={{marginBottom: 20, width: 300, height: 300}}
+  />
+);
+
+export const DesignSystemWorkflow = () => (
+  <Image
+    source={require('./images/design-system-workflow.jpg')}
+    style={{resizeMode: 'contain', height: '80%'}}
+  />
+);
+
+export const BeforeContributions = () => (
+  <Image
+    source={require('./images/before-contributions.png')}
+    style={{resizeMode: 'contain', height: '35%'}}
+  />
+);
+
+export const AfterContributions = () => (
+  <Image
+  source={require('./images/after-contributions.png')}
+  style={{resizeMode: 'contain', height: '30%'}}
+/>
+);
+
+export const MediumPost = () => (
+  <Image
+    source={require('./images/medium-post.gif')}
+  />
+);
+
 
 export const images = {
   sidebar: SidebarImage,
@@ -126,5 +160,10 @@ export const images = {
   applitools: Applitools,
   webView: WebView,
   oldUI: OldUI,
-  community: Community
+  community: Community,
+  qr: QR,
+  designSystemWorkflow: DesignSystemWorkflow,
+  beforeContributions: BeforeContributions,
+  afterContributions: AfterContributions,
+  mediumPost: MediumPost
 };

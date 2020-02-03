@@ -20,23 +20,27 @@ storiesOf('CHAPTER 1: What is Storybook')
     <ImageWithTitle
       title={text('description', 'Build components in isolation')}
       image={images[select('Image', Object.keys(images), 'canvas')]}
+      margin={false}
     />
   ))
   .add('4. Mocking cases', () => (
     <ImageWithTitle
       title={text('description', 'Mock hard to reach use cases')}
       image={images[select('Image', Object.keys(images), 'cases')]}
+      margin={false}
     />
   ))
   .add('5. Document cases', () => (
     <ImageWithTitle
       title={text('description', 'Document use cases as stories')}
       image={images[select('Image', Object.keys(images), 'sidebar')]}
+      margin={false}
     />
   ))
   .add('6. Addons', () => (
     <ImageWithTitle
       title={text('description', 'Experiment with addons')}
       image={images[select('Image', Object.keys(images), 'addons')]}
+      margin={false}
     />
   ));

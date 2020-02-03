@@ -1,44 +1,20 @@
-import React from 'react';
 import {storiesOf} from '@storybook/react-native';
 import {View} from 'react-native-ui-lib';
-import {number, text} from '@storybook/addon-knobs';
-import {Chapter, SyntaxHighlighter, Title} from '../../../src/components';
+import {Chapter, Title} from '../../../src/components';
+import {text} from '@storybook/addon-knobs';
+import React from 'react';
 
-storiesOf('CHAPTER 3: Setup')
+storiesOf('CHAPTER 3: Example')
   .add('1. Intro', () => (
-    <Chapter number={text('number', '03')} title={text('title', 'Setup')} />
+    <Chapter number={text('number', '03')} title={text('title', 'React Native Storybook')} />
   ))
-
-  .add('2. Installation', () => {
-    const fontSize = number('fontSize', 24);
-
-    return (
-      <View center flex>
-        <View style={{position: 'absolute'}}>
-          <Title>1.</Title>
-          <SyntaxHighlighter
-            language={'bash'}
-            codeString={text(
-              'codeString1',
-              'npm install --save-dev wix-react-native-storybook-template',
-            )}
-            fontSize={fontSize}
-          />
-          <View marginT-40>
-            <Title>2.</Title>
-            <SyntaxHighlighter
-              language={'javascript'}
-              codeString={text(
-                'codeString2',
-                `import {getStorybookTab} from ‛wix-react-native-storybook-template‛;
-
-const storybookUI = getStorybookTab();
-          `,
-              )}
-              fontSize={fontSize}
-            />
-          </View>
-        </View>
-      </View>
-    );
-  });
+  .add('2. Example', () => (
+    <View flex center>
+      <Title orange>{text('title', 'Example')}</Title>
+    </View>
+  ))
+  .add('2. Wix One App', () => (
+    <View flex center>
+      <Title>Wix One App</Title>
+    </View>
+  ));

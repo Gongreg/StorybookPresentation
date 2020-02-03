@@ -1,46 +1,45 @@
-import {storiesOf} from '@storybook/react-native';
-import {Chapter, Title, ImageWithTitle} from '../../../src/components';
-import {select, text} from '@storybook/addon-knobs';
 import React from 'react';
+import {storiesOf} from '@storybook/react-native';
+import {Chapter, ImageWithTitle} from '../../../src/components';
+import {select, text} from '@storybook/addon-knobs';
 import {images} from '../../../src/images';
 
-storiesOf('CHAPTER 6. Open Source Storybook')
+storiesOf('CHAPTER 6: Additional Benefits')
   .add('1. Intro', () => (
-  <Chapter
-    number={text('number', '06')}
-    title={text('title', 'Open Source Storybook')}
-  />
-))
-  .add('2. Welcome to contribute', () => (
-    <ImageWithTitle
-      title={text('description', 'Join us!')}
-      image={images[select('Image', Object.keys(images), 'community')]}
+    <Chapter
+      number={text('number', '06')}
+      title={text('title', 'Additional Benefits')}
     />
-  ), {
-    notes: `
- * Open open source
- * 800+ contributors
- * Only few in React Native
- * A great place to step into open source development
- * Roadmap meetings and friendly community
- * We have useful skills, (for instance Detox)
-    `
-  })
-  .add('3. History', () => (
+  ))
+  .add('2. Screenshot testing', () => (
     <ImageWithTitle
-      title={text('description', 'Old Storybook UI')}
-      image={images[select('Image', Object.keys(images), 'oldUI')]}
+      title={text('description', 'Screenshot testing')}
+      image={images[select('Image', Object.keys(images), 'applitools')]}
     />
-  ), {
-    notes: `
-# History
- * At first, separate packager with different entry point, no on device ui
- * Story list was added to ui
- * Making storybook a simple view that can be used anywhere
- * Trying out addons
- * New layout v1
- * Final layout
-    `
-  })
-
-;
+  ))
+  .add('3. Async storage', () => (
+    <ImageWithTitle
+      title={text('description', 'Async storage')}
+      image={images[select('Image', Object.keys(images), 'asyncStorage')]}
+    />
+  ))
+  .add('4. Component composition', () => (
+    <ImageWithTitle
+      title={text('description', 'Component separation')}
+      image={
+        images[select('Image', Object.keys(images), 'presentationalComponents')]
+      }
+    />
+  ))
+  .add('5. VSCode addon', () => (
+    <ImageWithTitle
+      title={text('description', 'Select stories in VSCode/Webstorm')}
+      image={images[select('Image', Object.keys(images), 'vscode')]}
+    />
+  ))
+  .add('6. Web view', () => (
+    <ImageWithTitle
+      title={text('description', 'Control from the browser')}
+      image={images[select('Image', Object.keys(images), 'webView')]}
+    />
+  ));

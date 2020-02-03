@@ -1,74 +1,40 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react-native';
 import {View} from 'react-native-ui-lib';
-import {color, number, text} from '@storybook/addon-knobs';
-import {
-  Chapter,
-  ChapterTitle,
-  SyntaxHighlighter,
-} from '../../../src/components';
+import {number, text} from '@storybook/addon-knobs';
+import {Chapter, SyntaxHighlighter, Title} from '../../../src/components';
 
-storiesOf('CHAPTER 4: Writing stories')
+storiesOf('CHAPTER 4: Setup')
   .add('1. Intro', () => (
-    <Chapter
-      number={text('number', '04')}
-      title={text('title', 'Writing Stories')}
-    />
+    <Chapter number={text('number', '04')} title={text('title', 'Setup')} />
   ))
 
-  .add('2. Default', () => {
+  .add('2. Installation', () => {
     const fontSize = number('fontSize', 24);
-    const stringText = text('title', 'Default Title');
-    const selectedColor = color('color', 'rgb(50, 50, 50)');
 
     return (
       <View center flex>
         <View style={{position: 'absolute'}}>
+          <Title>1.</Title>
           <SyntaxHighlighter
-            key={Math.random()}
-            language={'javascript'}
-            codeString={`import React from ‛react‛;
-import {storiesOf} from ‛wix-react-native-storybook-template‛;
-
-storiesOf(‛Chapter Title‛)
-  .add(‛Default‛, () =❯ ❮ChapterTitle❯${stringText}❮/ChapterTitle❯)`}
+            language={'bash'}
+            codeString={text(
+              'codeString1',
+              'npm install --save-dev wix-react-native-storybook-template',
+            )}
             fontSize={fontSize}
           />
-          <View
-            style={{
-              marginTop: 50,
-              paddingTop: 40,
-              backgroundColor: selectedColor,
-            }}>
-            <ChapterTitle>{stringText}</ChapterTitle>
-          </View>
-        </View>
-      </View>
-    );
-  })
-  .add('3. Bold', () => {
-    const fontSize = number('fontSize', 24);
-    const stringText = text('title', 'Bold Title');
-    const selectedColor = color('color', 'rgb(50, 50, 50)');
+          <View marginT-40>
+            <Title>2.</Title>
+            <SyntaxHighlighter
+              language={'javascript'}
+              codeString={
+                `import {getStorybookUI} from ‛wix-react-native-storybook-template‛;
 
-    return (
-      <View center flex>
-        <View style={{position: 'absolute'}}>
-          <SyntaxHighlighter
-            key={Math.random()}
-            language={'javascript'}
-            codeString={`storiesOf(‛Chapter Title‛)
-  .add(‛Default‛, () =❯ ❮ChapterTitle❯Default Title❮/ChapterTitle❯)
-  .add(‛Bold‛, () =❯ ❮ChapterTitle h1B❯${stringText}❮/ChapterTitle❯);`}
-            fontSize={fontSize}
-          />
-          <View
-            style={{
-              marginTop: 50,
-              paddingTop: 40,
-              backgroundColor: selectedColor,
-            }}>
-            <ChapterTitle h1B>{stringText}</ChapterTitle>
+const storybookUI = getStorybookUI(() => require(‛../storybook‛), module);`
+              }
+              fontSize={fontSize}
+            />
           </View>
         </View>
       </View>

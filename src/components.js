@@ -75,10 +75,12 @@ export const Chapter = ({number, title}) => {
   );
 };
 
-export const ImageWithTitle = ({image, title}) => (
+export const ImageWithTitle = ({image, title, margin = true}) => (
   <View flex center>
     {image()}
-    <SubTitle>{title}</SubTitle>
+    <View marginT-10={margin}>
+      <SubTitle>{title}</SubTitle>
+    </View>
   </View>
 );
 

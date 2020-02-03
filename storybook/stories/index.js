@@ -23,6 +23,7 @@ require('./chapters/chapter4');
 require('./chapters/chapter5');
 require('./chapters/chapter6');
 require('./chapters/chapter7');
+require('./chapters/chapter8');
 
 require('./screens');
 require('./components');
