@@ -12,13 +12,24 @@ storiesOf('CHAPTER 2: Why Storybook?')
       title={text('title', 'Why Storybook?')}
     />
   ))
-  .add('2. Design systems', () => (
+  .add('2. 45k stars, 1m+ npm installs per week', () => (
+      <View flex center>
+        <Title orange>45000+ Github stars</Title>
+        <Title>1m+ npm installs/week</Title>
+      </View>
+  ))
+  .add('3. Storybook is a team product', () => (
     <View flex center>
-      <Title orange>{text('title', 'Design Systems')}</Title>
+    <Title orange>{text('title', 'Storybook = Team Tool')}</Title>
+  </View>
+  ))
+  .add('3. Usual feedback loop', () => (
+    <View flex center>
+       {images[select('Image', Object.keys(images), 'diagramBefore')]()}
     </View>
   ))
-  .add('3. Design systems workflow', () => (
+  .add('3. Feedback loop with Storybook', () => (
     <View flex center>
-      {images[select('Image', Object.keys(images), 'designSystemWorkflow')]()}
+       {images[select('Image', Object.keys(images), 'diagramAfter')]()}
     </View>
-  ));
+  ));  

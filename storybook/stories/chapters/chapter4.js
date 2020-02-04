@@ -39,4 +39,4 @@ const storybookUI = getStorybookUI(() => require(‛../storybook‛), module);`
         </View>
       </View>
     );
-  });
+  })

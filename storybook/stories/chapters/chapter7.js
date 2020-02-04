@@ -1,6 +1,7 @@
 import {storiesOf} from '@storybook/react-native';
-import {Chapter, Title, ImageWithTitle} from '../../../src/components';
-import {select, text} from '@storybook/addon-knobs';
+import {View} from 'react-native-ui-lib';
+import {Chapter, HalfSplit, Title, ImageWithTitle} from '../../../src/components';
+import {select, array, text} from '@storybook/addon-knobs';
 import React from 'react';
 import {images} from '../../../src/images';
 
@@ -62,4 +63,30 @@ storiesOf('CHAPTER 7: Open Source ❤️ Storybook')
  * We have useful skills, (for instance Detox)
     `
   })
-;
+  .add('7. Issues list', () => (
+    <ImageWithTitle
+    title={text('description', 'Good First Issues')}
+    image={images[select('Image', Object.keys(images), 'goodFirstIssues')]}
+  />
+  ))
+  .add('8. React Native Roadmap', () => (
+    <HalfSplit
+    title={text('title', 'RN Storybook Roadmap')}
+    data={[...array('items', [
+      'Monorepo/Dev Experience',
+      'E2E Tests with Detox',
+      'CI',
+      'React Native Web',
+      'Storybook inside WebView',
+      
+    ]), '& more']}
+  />
+  ))
+  .add('9. Contact me', () => (
+    <View flex center>
+      <Title orange>Email</Title>
+      <Title>gytis.vinclovas@gmail.com</Title>
+      <Title orange>Twitter</Title>
+      <Title>@GytisVinclovas</Title>
+    </View>
+  ));

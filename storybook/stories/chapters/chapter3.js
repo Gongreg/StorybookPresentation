@@ -13,8 +13,8 @@ storiesOf('CHAPTER 3: Example')
       <Title orange>{text('title', 'Example')}</Title>
     </View>
   ))
-  .add('2. Wix One App', () => (
+  .add('3. Wix One App', () => (
     <View flex center>
-      <Title>Wix One App</Title>
+      <Title>Wix Mobile App</Title>
     </View>
   ));

@@ -143,6 +143,27 @@ export const MediumPost = () => (
   />
 );
 
+export const GoodFirstIssues = () => (
+  <Image
+    source={require('./images/good-first-issues.png')}
+    style={{resizeMode: 'contain', height: '80%'}}
+  />
+);
+
+export const DiagramBefore = () => (
+  <Image
+    source={require('./images/diagram-before.png')}
+    style={{resizeMode: 'contain', height: '46%'}}
+  />
+);
+
+export const DiagramAfter = () => (
+  <Image
+    source={require('./images/diagram-after.png')}
+    style={{resizeMode: 'contain', height: '19%'}}
+  />
+);
+
 
 export const images = {
   sidebar: SidebarImage,
@@ -165,5 +186,8 @@ export const images = {
   designSystemWorkflow: DesignSystemWorkflow,
   beforeContributions: BeforeContributions,
   afterContributions: AfterContributions,
-  mediumPost: MediumPost
+  mediumPost: MediumPost,
+  goodFirstIssues: GoodFirstIssues,
+  diagramBefore: DiagramBefore,
+  diagramAfter: DiagramAfter
 };
