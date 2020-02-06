@@ -1,6 +1,6 @@
 import {storiesOf} from '@storybook/react-native';
 import {View} from 'react-native-ui-lib';
-import {Chapter, Title} from '../../../src/components';
+import {Chapter, ImageWithTitle, Title} from '../../../src/components';
 import {select, text} from '@storybook/addon-knobs';
 import {images} from '../../../src/images';
 import React from 'react';
@@ -23,13 +23,20 @@ storiesOf('CHAPTER 2: Why Storybook?')
     <Title orange>{text('title', 'Storybook = Team Tool')}</Title>
   </View>
   ))
-  .add('3. Usual feedback loop', () => (
+  .add('4. Usual feedback loop', () => (
     <View flex center>
        {images[select('Image', Object.keys(images), 'diagramBefore')]()}
     </View>
   ))
-  .add('3. Feedback loop with Storybook', () => (
+  .add('5. Feedback loop with Storybook', () => (
     <View flex center>
        {images[select('Image', Object.keys(images), 'diagramAfter')]()}
     </View>
-  ));  
+  ))
+  .add('6. Wix Style React', () => (
+    <ImageWithTitle
+      title={text('description', 'Wix Style React')}
+      image={images[select('Image', Object.keys(images), 'wixStyleReact')]}
+    />
+  ))
+  ;  

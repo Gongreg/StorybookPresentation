@@ -164,6 +164,12 @@ export const DiagramAfter = () => (
   />
 );
 
+export const WixStyleReact = () => (
+  <Image
+    source={require('./images/wix-style-react.png')}
+    style={{resizeMode: 'contain', height: '70%'}}
+  />
+);
 
 export const images = {
   sidebar: SidebarImage,
@@ -189,5 +195,6 @@ export const images = {
   mediumPost: MediumPost,
   goodFirstIssues: GoodFirstIssues,
   diagramBefore: DiagramBefore,
-  diagramAfter: DiagramAfter
+  diagramAfter: DiagramAfter,
+  wixStyleReact: WixStyleReact
 };

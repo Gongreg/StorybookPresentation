@@ -84,10 +84,10 @@ export const ImageWithTitle = ({image, title, margin = true}) => (
   </View>
 );
 
-export const LongQuote = ({title}) => (
+export const LongQuote = ({title, h2}) => (
   <View background-blue flex center>
     <View>
-      <Title orange>{title}</Title>
+      <Title orange h2={h2}>{title}</Title>
     </View>
     <View style={{position: 'absolute', bottom: 100}}>
       <DotsImage />
